@@ -147,29 +147,53 @@ def generate_launch_description():
         )
     )
 
+    # pointcloud_to_laserscan_node = Node(
+    #     package="pointcloud_to_laserscan",
+    #     executable="pointcloud_to_laserscan_node",
+    #     remappings=[
+    #         ("cloud_in", "/Spot/Velodyne_Puck/point_cloud"),
+    #     ],
+    #     parameters=[
+    #         {
+    #             "transform_tolerance": 0.01,
+    #             "min_height": 0.0,
+    #             "max_height": 1.0,
+    #             "angle_min": -3.14,
+    #             "angle_max": 3.14,
+    #             "angle_increment": 0.00872,
+    #             "scan_time": 0.1,
+    #             "range_min": 0.9,
+    #             "range_max": 100.0,
+    #             "use_inf": True,
+    #             "inf_epsilon": 1.0,
+    #         }
+    #     ],
+    #     name="pointcloud_to_laserscan",
+    # )
     pointcloud_to_laserscan_node = Node(
         package="pointcloud_to_laserscan",
         executable="pointcloud_to_laserscan_node",
         remappings=[
-            ("cloud_in", "/Spot/Velodyne_Puck/point_cloud"),
+            ("cloud_in", "/Spot/lidar/point_cloud"),
         ],
         parameters=[
             {
                 "transform_tolerance": 0.01,
                 "min_height": 0.0,
                 "max_height": 1.0,
-                "angle_min": -3.14,
-                "angle_max": 3.14,
-                "angle_increment": 0.00872,
-                "scan_time": 0.1,
-                "range_min": 0.9,
-                "range_max": 100.0,
+                "angle_min": -2.35619449,
+                "angle_max": 2.35619449,
+                "angle_increment": 0.0174532925,
+                "scan_time": 0.06667,
+                "range_min": 0.05,
+                "range_max": 15.0,
                 "use_inf": True,
                 "inf_epsilon": 1.0,
             }
         ],
         name="pointcloud_to_laserscan",
     )
+    
 
     return LaunchDescription(
         [
@@ -182,5 +206,5 @@ def generate_launch_description():
             reset_handler,
             pointcloud_to_laserscan_node,
         ]
-        + get_ros2_nodes()
+        # + get_ros2_nodes()
     )

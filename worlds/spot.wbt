@@ -22,8 +22,8 @@ WorldInfo {
   title "Spot_Maze"
 }
 Viewpoint {
-  orientation -0.31932957656796374 -0.04731484214093281 0.9464617938628603 3.4202574570661715
-  position 30.667556050971868 17.33170710144791 26.41366885587228
+  orientation -0.3327861797405667 -0.1066622724269289 0.9369506487613971 4.60991359057576
+  position 8.293025960335333 7.822118038670869 1.281609356463497
 }
 TexturedBackground {
   texture "factory"
@@ -288,6 +288,13 @@ DEF Spot Spot {
   rotation 0 0 1 -3.14159
   controller "<extern>"
   supervisor TRUE
+  frontExtension [
+    Lidar {
+      translation 9.47404e-08 0.04 1.64023e-07
+      rotation -0.577349935856137 0.577349935856137 0.5773509358560258 2.09439
+      maxRange 15
+    }
+  ]
   middleExtension [
     VelodynePuck {
       translation 0 0.04 0.09
