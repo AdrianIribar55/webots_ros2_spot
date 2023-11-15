@@ -66,3 +66,6 @@ Teleop keyboard:
 ros2 run teleop_twist_keyboard teleop_twist_keyboard
 # OR ros2 run spot_teleop spot_teleop_keyboard for body_pose control as well
 ```
+
+## map to robot
+    is the location to robot with reffeance to the map is needed run: ros2 launch webots_spot_ros2 nav_launch.py
