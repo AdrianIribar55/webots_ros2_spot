@@ -22,8 +22,8 @@ WorldInfo {
   title "Spot_Maze"
 }
 Viewpoint {
-  orientation -0.3327861797405667 -0.1066622724269289 0.9369506487613971 4.60991359057576
-  position 8.293025960335333 7.822118038670869 1.281609356463497
+  orientation -0.36048448583324505 -0.26541824396362274 0.8942058438887591 4.126273038050268
+  position 10.85209819843058 36.92162151746736 29.313641537998983
 }
 TexturedBackground {
   texture "factory"
@@ -444,4 +444,11 @@ Solid {
 IceFreezerContainer {
   translation -4.26 11.49 0
   rotation 0 0 1 -0.523595307179586
+}
+Pedestrian {
+  translation 0 9 1.27
+  controllerArgs [
+    "--speed=0.20"
+    "--trajectory=-2.0 9.15,1.15 9.15"
+  ]
 }
