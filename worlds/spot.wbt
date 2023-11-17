@@ -22,8 +22,8 @@ WorldInfo {
   title "Spot_Maze"
 }
 Viewpoint {
-  orientation -0.36048448583324505 -0.26541824396362274 0.8942058438887591 4.126273038050268
-  position 10.85209819843058 36.92162151746736 29.313641537998983
+  orientation -0.3134124434171827 -0.05132517957243126 0.9482290684497754 3.2337108673646946
+  position 66.86551905144779 17.036466783306782 50.24322723651165
 }
 TexturedBackground {
   texture "factory"
@@ -32,7 +32,7 @@ TexturedBackground {
 RectangleArena {
   translation 0.59 5 0
   rotation 0 1 0 0
-  floorSize 18 20
+  floorSize 18 42
   floorTileSize 1 1
   floorAppearance ThreadMetalPlate {
   }
@@ -45,27 +45,28 @@ RectangleArena {
   }
 }
 EmergencyPhone {
-  translation 4.99 11.83 0
+  translation 4.74956 18.6795 0
+  rotation 0 0 1 -0.785395307179586
 }
 TrashBin {
-  translation 1.66 12.9 0
+  translation -0.5995 21.3321 0
   rotation 0 0 1 -2.8797953071795863
 }
 Atm {
-  translation -4.46695 7.37641 0
+  translation -5.38834 10.815 0
   rotation 0 0 1 0.261803
 }
 TrashContainer {
-  translation 3.89088 8.31902 0
+  translation 4.88084 12.1657 0
   rotation 0 0 1 0.785398
 }
 DogHouse {
-  translation 0 7.3 0
+  translation -2.64648 8.32386 0
   rotation 0 0 1 0.523599
 }
 CerealBox {
-  translation -1.05 10.85 0
-  rotation 0 0 1 0.523602
+  translation -1.7657 12.2489 0
+  rotation 0 0 1 0.5236020000000002
   size 0.5 1 1
 }
 Pedestrian {
@@ -442,13 +443,67 @@ Solid {
   name "aruco"
 }
 IceFreezerContainer {
-  translation -4.26 11.49 0
+  translation -3.55458 16.9714 0
   rotation 0 0 1 -0.523595307179586
 }
 Pedestrian {
-  translation 0 9 1.27
+  translation 2.89 8.81 1.27
   controllerArgs [
     "--speed=0.20"
-    "--trajectory=-2.0 9.15,1.15 9.15"
+    "--trajectory=-0.13 8.81, 2.89 8.81"
+  ]
+}
+Pedestrian {
+  translation 7.6 11.3 1.37
+  rotation 0 0 1 1.5708
+  name "pedestrian(1)"
+  controllerArgs [
+    "--speed=0.20"
+    "--trajectory=- 7.6 8.81, 7.6 11.3"
+  ]
+}
+Pedestrian {
+  translation 3.28 16.91 1.47
+  rotation 1.5023e-14 -9.58977e-09 1 3.14159
+  name "pedestrian(2)"
+  controllerArgs [
+    "--speed=0.20"
+    "--trajectory= 7.7 16.9, 3.28 16.9"
+  ]
+}
+Pedestrian {
+  translation 1.59 14.44 1.57
+  rotation -9.58974e-09 -9.58977e-09 1 -1.5707953071795862
+  name "pedestrian(3)"
+  controllerArgs [
+    "--speed=0.20"
+    "--trajectory= 1.59 19.5, 1.59 14.4"
+  ]
+}
+Pedestrian {
+  translation -1.19 16.5731 1.67
+  rotation -1.661e-08 9.58975e-09 -1 -1.047195307179586
+  name "pedestrian(4)"
+  controllerArgs [
+    "--speed=0.20"
+    "--trajectory= -3.19 13.1, -1.19 16.6"
+  ]
+}
+Pedestrian {
+  translation -1.93502 19.3531 1.77
+  rotation -0.008486209927628906 -1.4617699875339057e-08 0.999963991472225 -5.307179586466759e-06
+  name "pedestrian(5)"
+  controllerArgs [
+    "--speed=0.20"
+    "--trajectory= -5.91 19.4, -1.94 19.4"
+  ]
+}
+Pedestrian {
+  translation 7.68498 21.4331 1.87
+  rotation -0.008486209927628906 -1.4617699875339057e-08 0.999963991472225 -5.307179586466759e-06
+  name "pedestrian(6)"
+  controllerArgs [
+    "--speed=0.20"
+    "--trajectory= 2.34 21.4, 7.68 21.4 "
   ]
 }
