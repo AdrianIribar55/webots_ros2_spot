@@ -9,7 +9,6 @@ EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/project
 EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/solids/protos/SolidBox.proto"
 EXTERNPROTO "../protos/Spot.proto"
 EXTERNPROTO "../protos/ImageBox.proto"
-EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/devices/velodyne/protos/VelodynePuck.proto"
 EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/kitchen/breakfast/protos/CerealBox.proto"
 EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/garden/protos/DogHouse.proto"
 EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/street_furniture/protos/TrashContainer.proto"
@@ -22,8 +21,8 @@ WorldInfo {
   title "Spot_Maze"
 }
 Viewpoint {
-  orientation -0.3134124434171827 -0.05132517957243126 0.9482290684497754 3.2337108673646946
-  position 66.86551905144779 17.036466783306782 50.24322723651165
+  orientation -0.35447441074061625 -0.2921539897114391 0.8882533075794209 4.690987091558761
+  position 8.11440516060907 10.805867607454255 3.477895005836537
 }
 TexturedBackground {
   texture "factory"
@@ -291,16 +290,11 @@ DEF Spot Spot {
   supervisor TRUE
   frontExtension [
     Lidar {
-      translation 9.47404e-08 0.04 1.64023e-07
+      translation 0 0.125 0.13
       rotation -0.577349935856137 0.577349935856137 0.5773509358560258 2.09439
       maxRange 15
-    }
-  ]
-  middleExtension [
-    VelodynePuck {
-      translation 0 0.04 0.09
-      rotation -0.577349935856137 0.577349935856137 0.5773509358560258 2.09439
-      name "Velodyne_Puck"
+      type "rotating"
+      defaultFrequency 15
     }
   ]
 }
