@@ -133,12 +133,12 @@ def generate_launch_description():
 
     # The following line is important!
     # This event handler respawns the ROS 2 nodes on simulation reset (supervisor process ends).
-    reset_handler = launch.actions.RegisterEventHandler(
-        event_handler=launch.event_handlers.OnProcessExit(
-            target_action=ros2_supervisor,
-            on_exit=get_ros2_nodes,
-        )
-    )
+    # reset_handler = launch.actions.RegisterEventHandler(
+    #     event_handler=launch.event_handlers.OnProcessExit(
+    #         target_action=ros2_supervisor,
+    #         on_exit=get_ros2_nodes,
+    #     )
+    # )
 
     webots_event_handler = launch.actions.RegisterEventHandler(
         event_handler=launch.event_handlers.OnProcessExit(
@@ -206,7 +206,7 @@ def generate_launch_description():
             robot_state_publisher,
             # spot_pointcloud2,
             webots_event_handler,
-            reset_handler,
+            # reset_handler,
             pointcloud_to_laserscan_node,
         ]
         # + get_ros2_nodes()
