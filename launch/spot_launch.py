@@ -179,12 +179,12 @@ def generate_launch_description():
         parameters=[
             {
                 "transform_tolerance": 0.01,
-                "min_height": 0.0,
+                "min_height": 0.0,  
                 "max_height": 1.0,
-                "angle_min": -2.356194496154785,#-2.35619449,
-                "angle_max": 2.356194496154785,#2.35619449,
-                # "angle_min": -3.14,
-                # "angle_max": 3.14,
+                # "angle_min": -2.356194496154785,#-2.35619449,
+                # "angle_max": 2.356194496154785,#2.35619449,
+                "angle_min": -3.14,
+                "angle_max": 3.14,
                 "angle_increment": 0.01745329238474369,#0.0175,
                 "scan_time": 0.06666667014360428,#0.06667,
                 "range_min": 0.005,
