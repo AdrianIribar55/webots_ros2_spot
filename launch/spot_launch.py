@@ -92,7 +92,7 @@ def generate_launch_description():
     use_sim_time = LaunchConfiguration("use_sim_time", default=True)
 
     webots = WebotsLauncher(
-        world=PathJoinSubstitution([package_dir, "worlds", "spot.wbt"])
+        world=PathJoinSubstitution([package_dir, "worlds", "spot_test_room_no_obstacale.wbt"])
     )
     ros2_supervisor = Ros2SupervisorLauncher()
 
