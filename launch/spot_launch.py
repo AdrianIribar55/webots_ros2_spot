@@ -93,8 +93,8 @@ def generate_launch_description():
 
     webots = WebotsLauncher(
         # world=PathJoinSubstitution([package_dir, "worlds", "spot_test_room_no_obstacale.wbt"])
-        # world=PathJoinSubstitution([package_dir, "worlds", "spot_test_room_one_static_obstacale.wbt"])
-        world=PathJoinSubstitution([package_dir, "worlds", "spot_test_room_one_dynamic_obstacale.wbt"])
+         world=PathJoinSubstitution([package_dir, "worlds", "spot_test_room_one_static_obstacale.wbt"])
+        #world=PathJoinSubstitution([package_dir, "worlds", "spot_test_room_one_dynamic_obstacale.wbt"])
     )
     ros2_supervisor = Ros2SupervisorLauncher()
 
@@ -176,28 +176,52 @@ def generate_launch_description():
         package="pointcloud_to_laserscan",
         executable="pointcloud_to_laserscan_node",
         remappings=[
-            ("cloud_in", "/Spot/lidar/point_cloud"),
+            ("cloud_in", "/Spot/Velodyne_Puck/point_cloud"),
         ],
         parameters=[
             {
                 "transform_tolerance": 0.01,
-                "min_height": 0.0,  
+                "min_height": 0.0,
                 "max_height": 1.0,
-                "angle_min": -2.356194496154785,#-2.35619449,
-                "angle_max": 2.356194496154785,#2.35619449,
-                # "angle_min": -3.14,
-                # "angle_max": 3.14,
-                "angle_increment": 0.01745329238474369,#0.0175,
-                "scan_time": 0.06666667014360428,#0.06667,
-                "range_min": 0.005,
-                "range_max": 15.0,
-                
+                "angle_min": -3.14,
+                "angle_max": 3.14,
+                "angle_increment": 0.00872,
+                "scan_time": 0.1,
+                "range_min": 0.9,
+                "range_max": 100.0,
                 "use_inf": True,
                 "inf_epsilon": 1.0,
             }
         ],
         name="pointcloud_to_laserscan",
     )
+    # pointcloud_to_laserscan_node = Node(
+    #     package="pointcloud_to_laserscan",
+    #     executable="pointcloud_to_laserscan_node",
+    #     remappings=[
+    #         # ("cloud_in", "/Spot/Velodyne_Puck/point_cloud"),
+    #         ("cloud_in", "/Spot/Lidar/point_cloud"),
+    #     ],
+    #     parameters=[
+    #         {
+    #             "transform_tolerance": 0.01,
+    #             "min_height": 0.0,  
+    #             "max_height": 1.0,
+    #             #"angle_min": -2.356194496154785,#-2.35619449,
+    #             #"angle_max": 2.356194496154785,#2.35619449,
+    #              "angle_min": -3.14,
+    #              "angle_max": 3.14,
+    #             "angle_increment": 0.01745329238474369,#0.0175,
+    #             "scan_time": 0.06666667014360428,#0.06667,
+    #             "range_min": 0.005,
+    #             "range_max": 15.0,
+                
+    #             "use_inf": True,
+    #             "inf_epsilon": 1.0,
+    #         }
+    #     ],
+    #     name="pointcloud_to_laserscan",
+    # )
     
 
     return LaunchDescription(

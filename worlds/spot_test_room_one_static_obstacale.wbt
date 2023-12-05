@@ -16,13 +16,14 @@ EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/project
 EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/street_furniture/protos/TrashBin.proto"
 EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/street_furniture/protos/EmergencyPhone.proto"
 EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/street_furniture/protos/IceFreezerContainer.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/devices/velodyne/protos/VelodynePuck.proto"
 
 WorldInfo {
   title "Spot_Maze"
 }
 Viewpoint {
-  orientation 0.3877340572576502 -0.4358961704293147 -0.8121926061271298 4.621573370073592
-  position 3.7080685877280386 -26.19189464816455 17.17956879313307
+  orientation 0.5741133030559696 -0.5780391170328781 -0.5798833455394411 4.198505371007379
+  position 11.30101272249183 -12.235202731469716 30.774889466100298
 }
 TexturedBackground {
   texture "factory"
@@ -44,7 +45,7 @@ RectangleArena {
   }
 }
 EmergencyPhone {
-  translation 1.64311 -13.0165 0
+  translation 5.14311 -11.9565 0
   rotation 0 0 1 2.85387e-06
   name "emergency phone(1)"
 }
@@ -74,7 +75,7 @@ DogHouse {
   rotation 0 0 1 0.523599
 }
 CerealBox {
-  translation 6.06437 -13.0211 0
+  translation 6.06437 -3.5311 0
   rotation 0 0 -1 -5.307179586466759e-06
   size 0.5 1 1
 }
@@ -98,7 +99,7 @@ SolidBox {
   }
 }
 SolidBox {
-  translation 3.98001 -10.01 0.85
+  translation 5.07001 -7.98 0.85
   rotation 0 0 1 -1.5707953071795862
   name "arena_wall_2"
   size 0.03 3 1.7
@@ -114,7 +115,7 @@ SolidBox {
   }
 }
 SolidBox {
-  translation 5.14001 -10.01 0.85
+  translation 2.01001 -8 0.85
   rotation 0 0 1 -1.5707953071795862
   name "arena_wall_2(2)"
   size 0.03 3 1.7
@@ -130,7 +131,7 @@ SolidBox {
   }
 }
 SolidBox {
-  translation 8.09001 -10.01 0.85
+  translation 8.09001 -8.01 0.85
   rotation 0 0 1 -1.5707953071795862
   name "arena_wall_2(1)"
   size 0.03 3 1.7
@@ -146,7 +147,7 @@ SolidBox {
   }
 }
 SolidBox {
-  translation -1.84 -1.51 0.85
+  translation 0.55 -9.08 0.85
   name "arena_wall_3"
   size 0.03 3 1.7
   appearance PBRAppearance {
@@ -161,7 +162,7 @@ SolidBox {
   }
 }
 SolidBox {
-  translation 2.57 -14.51 0.85
+  translation 0.56 -14.51 0.85
   name "arena_wall_4"
   size 0.03 3 1.7
   appearance PBRAppearance {
@@ -176,7 +177,7 @@ SolidBox {
   }
 }
 SolidBox {
-  translation 2.57 -11.54 0.85
+  translation 0.55 -11.54 0.85
   name "arena_wall_4(1)"
   size 0.03 3 1.7
   appearance PBRAppearance {
@@ -333,17 +334,14 @@ Robot {
   supervisor TRUE
 }
 DEF Spot Spot {
-  translation 8.1002 -13.03 0.6
+  translation 7.9102 -12.01 0.6
   rotation 0 0 1 -3.1415853071795863
   controller "<extern>"
   supervisor TRUE
   frontExtension [
-    Lidar {
-      translation 0 0.125 0.13
-      rotation -0.577349935856137 0.577349935856137 0.5773509358560258 2.09439
-      maxRange 15
-      type "rotating"
-      defaultFrequency 15
+    VelodynePuck {
+      translation 1.67294e-08 0.04 1.83069e-07
+      rotation -0.5773479358540498 0.5773509358537164 0.5773519358536053 2.0944
     }
   ]
 }
