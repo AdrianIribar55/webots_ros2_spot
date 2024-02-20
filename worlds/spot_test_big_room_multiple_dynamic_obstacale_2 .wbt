@@ -22,8 +22,8 @@ WorldInfo {
   title "Spot_Maze"
 }
 Viewpoint {
-  orientation -0.4690235897099635 0.4833104475308552 0.7392076052118948 1.8396733692299936
-  position 0.3215127246228675 -26.70597907716796 41.17180241397921
+  orientation -0.43007846476780304 0.4215627992843882 0.798321564535545 1.8136236300007773
+  position 2.392649008235531 -33.400453929236 40.21829709142628
 }
 TexturedBackground {
   texture "factory"
@@ -505,19 +505,27 @@ IceFreezerContainer {
   rotation 0 0 1 -0.523595307179586
 }
 Pedestrian {
-  translation 0.54 1.62 1.27
+  translation 0.76 1.62 1.27
   controllerArgs [
     "--speed=0.3"
     "--trajectory=0.54 1.58, 0.54 -16.2"
   ]
 }
 Pedestrian {
-  translation 7.6 11.3 1.37
+  translation -8.08 -3.37 1.27
+  name "pedestrian(7)"
+  controllerArgs [
+    "--speed=0.3"
+    "--trajectory=-8.08 -3.37, 8.76 -3.37"
+  ]
+}
+Pedestrian {
+  translation 8.76 -11.73 1.37
   rotation 0 0 1 1.5708
   name "pedestrian(1)"
   controllerArgs [
-    "--speed=0.2"
-    "--trajectory=-7.6 8.81, 7.6 11.3"
+    "--speed=0.3"
+    "--trajectory=8.73 -11.7, -8.02 -11.07"
   ]
 }
 Pedestrian {

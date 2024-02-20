@@ -93,8 +93,15 @@ def generate_launch_description():
 
     webots = WebotsLauncher(
         # world=PathJoinSubstitution([package_dir, "worlds", "spot_test_room_no_obstacale.wbt"])
-         world=PathJoinSubstitution([package_dir, "worlds", "spot_test_room_one_static_obstacale.wbt"])
+        #world=PathJoinSubstitution([package_dir, "worlds", "spot_test_room_one_static_obstacale.wbt"])
+
         #world=PathJoinSubstitution([package_dir, "worlds", "spot_test_room_one_dynamic_obstacale.wbt"])
+        #world=PathJoinSubstitution([package_dir, "worlds", "spot_test_big_room_no_obstacale.wbt"])
+        
+        
+        #world=PathJoinSubstitution([package_dir, "worlds", "spot_test_big_room_one_static_obstacale.wbt"])
+        #world=PathJoinSubstitution([package_dir, "worlds", "spot_test_big_room_one_dynamic_obstacale.wbt"])
+        world=PathJoinSubstitution([package_dir, "worlds", "spot_test_big_room_multiple_dynamic_obstacale_2 .wbt"])
     )
     ros2_supervisor = Ros2SupervisorLauncher()
 
