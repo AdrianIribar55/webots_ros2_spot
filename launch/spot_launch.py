@@ -101,7 +101,7 @@ def generate_launch_description():
         
         #world=PathJoinSubstitution([package_dir, "worlds", "spot_test_big_room_one_static_obstacale.wbt"])
         #world=PathJoinSubstitution([package_dir, "worlds", "spot_test_big_room_one_dynamic_obstacale.wbt"])
-        world=PathJoinSubstitution([package_dir, "worlds", "spot_test_big_room_multiple_dynamic_obstacale_2 .wbt"])
+        world=PathJoinSubstitution([package_dir, "worlds", "spot_test_big_room_multiple_dynamic_obstacale_5 .wbt"])
     )
     ros2_supervisor = Ros2SupervisorLauncher()
 

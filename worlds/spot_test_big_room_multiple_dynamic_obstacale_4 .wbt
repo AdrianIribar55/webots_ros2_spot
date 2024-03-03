@@ -22,8 +22,8 @@ WorldInfo {
   title "Spot_Maze"
 }
 Viewpoint {
-  orientation -0.43007846476780304 0.4215627992843882 0.798321564535545 1.8136236300007773
-  position 2.6914545107478456 -33.55658235826457 40.1115312446869
+  orientation -0.45632437156390215 0.4275879894993712 0.7803438851895331 1.8788748791009136
+  position 2.639522464343326 -27.609731420459127 43.941193432176725
 }
 TexturedBackground {
   texture "factory"
@@ -58,15 +58,15 @@ TrashBin {
   rotation 0 0 1 -2.8797953071795863
 }
 Atm {
-  translation -5.38834 10.815 0
-  rotation 0 0 1 0.261803
+  translation 0.0116702 -4.585 0
+  rotation 0 0 -1 -5.307179586466759e-06
 }
 TrashContainer {
   translation 5.0647 11.9814 0
   rotation 0 0 1 0.785398
 }
 TrashContainer {
-  translation 7.0521 3.5035 0
+  translation -0.4679 -9.4365 0
   rotation 0 0 1 -1.5707953071795862
   name "trash container(1)"
 }
@@ -411,7 +411,7 @@ DEF Lane3 Solid {
   name "Lane3"
 }
 DEF Image1 ImageBox {
-  translation -2.52 4.02 0.001
+  translation 5.82 7.33 0.001
   name "image_bucket1"
   url [
     "/home/iribitxu55/ros2_ws/install/webots_spot/share/webots_spot/yolo_images/giraffe.jpeg"
@@ -508,23 +508,23 @@ Pedestrian {
   translation 0.76 1.62 1.27
   controllerArgs [
     "--speed=0.3"
-    "--trajectory=0.54 1.58, 0.54 -16.2"
+    "--trajectory=0.54 1.58, -5.19 -13.35"
   ]
 }
 Pedestrian {
-  translation -8.08 -3.37 1.27
+  translation -6.23 -4.22 1.27
   name "pedestrian(7)"
   controllerArgs [
     "--speed=0.3"
-    "--trajectory=-8.08 -3.37, 8.76 -3.37"
+    "--trajectory=-8.08 -3.37,  5.82 -8.37"
   ]
 }
 Pedestrian {
-  translation 8.76 -11.73 1.37
-  rotation 0 0 1 1.5708
+  translation 8.76 -12.05 1.37
+  rotation 0 0 -1 -2.6180053071795863
   name "pedestrian(1)"
   controllerArgs [
     "--speed=0.3"
-    "--trajectory=8.73 -11.7, -8.02 -11.07"
+    "--trajectory=8.73 -11.7, -6.16 -1.58"
   ]
 }

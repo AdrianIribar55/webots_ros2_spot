@@ -22,8 +22,8 @@ WorldInfo {
   title "Spot_Maze"
 }
 Viewpoint {
-  orientation -0.43007846476780304 0.4215627992843882 0.798321564535545 1.8136236300007773
-  position 2.6914545107478456 -33.55658235826457 40.1115312446869
+  orientation -0.4237067349746668 0.43226782940455943 0.7960007075367321 1.7774673693236949
+  position 0.9760562471177052 -29.96106059807908 42.48836406185767
 }
 TexturedBackground {
   texture "factory"
@@ -411,7 +411,7 @@ DEF Lane3 Solid {
   name "Lane3"
 }
 DEF Image1 ImageBox {
-  translation -2.52 4.02 0.001
+  translation -2.52 3.96 0.001
   name "image_bucket1"
   url [
     "/home/iribitxu55/ros2_ws/install/webots_spot/share/webots_spot/yolo_images/giraffe.jpeg"
@@ -526,5 +526,14 @@ Pedestrian {
   controllerArgs [
     "--speed=0.3"
     "--trajectory=8.73 -11.7, -8.02 -11.07"
+  ]
+}
+Pedestrian {
+  translation -3.41 -15.11 1.57
+  rotation -9.58974e-09 -9.58977e-09 1 -1.5707953071795862
+  name "pedestrian(3)"
+  controllerArgs [
+    "--speed=0.20"
+    "--trajectory= -3.14 -15.1, -2.52  0.37"
   ]
 }
