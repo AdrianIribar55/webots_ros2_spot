@@ -4,7 +4,6 @@ EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/project
 EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/floors/protos/RectangleArena.proto"
 EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/appearances/protos/ThreadMetalPlate.proto"
 EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/appearances/protos/Roughcast.proto"
-EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/humans/pedestrian/protos/Pedestrian.proto"
 EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/factory/pipes/protos/PipeSection.proto"
 EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/solids/protos/SolidBox.proto"
 EXTERNPROTO "../protos/Spot.proto"
@@ -22,8 +21,8 @@ WorldInfo {
   title "Spot_Maze"
 }
 Viewpoint {
-  orientation -0.5448729403654053 0.5476043949199005 0.6350140986796806 2.0055311140710477
-  position 7.437331951423375 -15.35739839037 48.08928837259507
+  orientation -0.5437409520182314 0.557507514210923 0.6273206107698558 1.998433155766759
+  position 7.62826860225282 -14.416821163210649 49.25624232135212
 }
 TexturedBackground {
   texture "factory"
@@ -58,7 +57,7 @@ TrashBin {
   rotation 0 0 1 -2.8797953071795863
 }
 Atm {
-  translation 0.0116702 -4.585 0
+  translation 1.56166 -10.475 0
   rotation 0 0 -1 -5.307179586466759e-06
 }
 TrashContainer {
@@ -66,7 +65,7 @@ TrashContainer {
   rotation 0 0 1 0.785398
 }
 TrashContainer {
-  translation -0.4679 -9.4365 0
+  translation -0.9379 -4.7665 0
   rotation 0 0 1 -1.5707953071795862
   name "trash container(1)"
 }
@@ -503,28 +502,4 @@ Solid {
 IceFreezerContainer {
   translation -3.55458 16.9714 0
   rotation 0 0 1 -0.523595307179586
-}
-Pedestrian {
-  translation 0.76 1.62 1.27
-  controllerArgs [
-    "--speed=0.3"
-    "--trajectory=0.54 1.58, -5.19 -13.35"
-  ]
-}
-Pedestrian {
-  translation -6.23 -4.22 1.27
-  name "pedestrian(7)"
-  controllerArgs [
-    "--speed=0.3"
-    "--trajectory=-8.08 -3.37,  5.82 -8.37"
-  ]
-}
-Pedestrian {
-  translation 8.76 -12.05 1.37
-  rotation 0 0 -1 -2.6180053071795863
-  name "pedestrian(1)"
-  controllerArgs [
-    "--speed=0.3"
-    "--trajectory=8.73 -11.7, -6.16 -1.58"
-  ]
 }
